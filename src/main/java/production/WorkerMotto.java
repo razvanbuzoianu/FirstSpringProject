@@ -2,7 +2,11 @@ package production;
 
 public class WorkerMotto {
 
-    public String citate;
+    private String citate;
+
+    public WorkerMotto(String citate) {
+        this.citate = citate;
+    }
 
     public String getCitate() {
         return citate;
@@ -15,7 +19,7 @@ public class WorkerMotto {
     @Override
     public String toString() {
         return "WorkerMotto{" +
-                "citate='" + citate + '\'' +
+                "citate = '" + citate + '\'' +
                 '}';
     }
 }

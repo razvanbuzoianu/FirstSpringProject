@@ -3,6 +3,24 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean name="hammer" class="production.Tool">
+        <constructor-arg index="0" value="5"/>
+        <constructor-arg index="1" value="hammer"/>
+    </bean>
+
+    <bean name="saw" class="production.Tool">
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="saw"/>
+    </bean>
+
+    <bean name="tools" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="hammer"/>
+                <ref bean="saw"/>
+            </list>
+        </constructor-arg>
+    </bean>
 
 
 </beans>

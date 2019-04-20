@@ -2,8 +2,13 @@ package production;
 
 public class Tool {
 
-    public int weight;
-    public String name;
+    private int weight;
+    private String name;
+
+    public Tool(int weight, String name) {
+        this.weight = weight;
+        this.name = name;
+    }
 
     public int getWeight() {
         return weight;
@@ -24,8 +29,8 @@ public class Tool {
     @Override
     public String toString() {
         return "Tool{" +
-                "weight=" + weight +
-                ", name='" + name + '\'' +
+                "weight = " + weight +
+                ", name = '" + name + '\'' +
                 '}';
     }
 }

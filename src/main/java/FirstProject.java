@@ -12,9 +12,10 @@ import java.util.List;
 public class FirstProject {
     public static void main(String[] args) {
 
-        String[] beans = new String[] {"tools.xml", "worker.xml"};
+        String[] beans = new String[]{"tools.xml", "worker.xml"};
         ApplicationContext xmlApplicationContext = new ClassPathXmlApplicationContext(beans);
         Worker testWorker = xmlApplicationContext.getBean(Worker.class);
+        System.out.println("\n\n" + testWorker + "\n\n");
 
         ApplicationContext annotationApplicationContext = new AnnotationConfigApplicationContext();
 
@@ -22,16 +23,13 @@ public class FirstProject {
         System.out.println("This is the set of tools created by Spring IoC Container from xml:\n " + Arrays.toString(tools.toArray()));
 
         Worker worker1 = xmlApplicationContext.getBean(Worker.class);
-        System.out.println("This is a worker created by Spring IoC container from xml: \n" + worker1);
+        System.out.println("This is a worker created by Spring IoC Container from xml: \n" + worker1);
 
         Worker worker2 = xmlApplicationContext.getBean(Worker.class);
         System.out.println("This is a worker created by Spring IoC container from xml: \n" + worker2);
 
-        Worker worker3 = xmlApplicationContext.getBean(Worker.class);
-        System.out.println("This is a worker created by Spring IoC container from xml: \n" + worker3);
+//        Worker hardWorker = annotationApplicationContext.getBean(Worker.class);
 
-        if(worker1==worker2){
 
-        }
     }
 }
