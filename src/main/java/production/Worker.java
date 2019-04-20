@@ -1,5 +1,7 @@
 package production;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
 public class Worker {
@@ -7,7 +9,8 @@ public class Worker {
     private String profession;
     private int age;
     private List<Tool> tools;
-    private WorkerMotto workerMotto;
+
+    @Autowired private WorkerMotto workerMotto;
 
     public Worker(String profession, int age, WorkerMotto workerMotto) {
         this.profession = profession;

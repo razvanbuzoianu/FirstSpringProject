@@ -15,5 +15,4 @@
         <constructor-arg value="No worker without tools!"/>
     </bean>
 
-
 </beans>
