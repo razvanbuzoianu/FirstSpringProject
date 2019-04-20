@@ -16,6 +16,6 @@ public class WorkerTest {
     @Test
     public void getTools(){
         Assert.assertNotNull(worker);
-        Assert.assertEquals(worker.getTools(), null);
+        Assert.assertNotNull(worker.getTools());
     }
 }
